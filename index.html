@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Standing Up For Jesus: Ambassadors for Jesus, salt and light at the kitchen table, at work, on Main Street and in government.">
+<meta name="theme-color" content="#0c1a36">
+<title>Standing Up For Jesus</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+/* VOICE occasion: a ministry's home, bold but warm, for older readers on phones
+   IDEA the printed one-pager: navy band, gold sunburst, cross; a city on a hill turning on its lights
+   PICTURE a night hill town under a rising gold sunburst and cross; windows light up one by one
+   COLOUR navy ground, gold, warm cream paper, white; one red for "coming soon" never
+   TYPE Tinos (Liberation Serif look) for titles + Source Sans 3 for reading
+   LAYOUT title across the top of the navy band, the scene full width beneath; sections as cream and white bands; phone: same order, stacked */
+:root{color-scheme:light dark;--navy:#13254a;--navy2:#0c1a36;--gold:#d9a441;--gold2:#f2c867;--paper:light-dark(#fbf5e8,#16213a);--bg:light-dark(#ffffff,#0f1930);--ink:light-dark(#1a2033,#eef0f6);--soft:light-dark(#4a5268,#b9c0d3);--line:light-dark(#e6dcc6,#2b3a5c);--card:light-dark(#ffffff,#1a2742);--tag:light-dark(#f6e7c6,#3a3220)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Source Sans 3",system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:Tinos,"Liberation Serif","Times New Roman",serif;line-height:1.08;letter-spacing:-.01em;margin:0}
+h2{font-size:clamp(30px,4.4vw,44px);color:light-dark(var(--navy),#fff)}
+h3{font-size:23px}
+p{margin:.6em 0}
+a{color:inherit}
+.in{max-width:1180px;margin:0 auto}
+.band{padding-block:clamp(36px,5vw,72px);padding-left:max(5vw,16px,env(safe-area-inset-left,0px));padding-right:max(5vw,16px,env(safe-area-inset-right,0px))}
+.paper{background:var(--paper)}
+.draft{background:var(--gold);color:#1a1405;font-size:14px;font-weight:600;text-align:center;padding:6px 16px;padding-top:calc(6px + env(safe-area-inset-top,0px))}
+nav{position:sticky;top:0;z-index:5;background:var(--navy2);color:#fff;display:flex;align-items:center;gap:14px;padding:8px max(5vw,16px,env(safe-area-inset-right,0px)) 8px max(5vw,16px,env(safe-area-inset-left,0px))}
+nav .mark{flex:none;width:34px;height:34px}
+nav .links{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav a{color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:8px 12px;border-radius:999px;white-space:nowrap}
+nav a:hover,nav a:focus-visible{background:#ffffff1f}
+.hero{background:var(--navy);color:#fff}
+.hero .top{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:28px;align-items:end}
+.hero h1{font-size:clamp(44px,7vw,80px);line-height:1;color:#fff}
+.hero .sub{font-family:Tinos,serif;font-style:italic;color:var(--gold2);font-size:22px;margin-top:10px}
+.hero .lead{font-size:19px;color:#dfe5f3;max-width:34em}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:10px 20px;border-radius:10px;font-weight:700;font-size:17px;text-decoration:none;border:2px solid var(--gold);color:#fff;background:transparent;cursor:pointer;font-family:inherit}
+.btn.main{background:var(--gold);color:#16130a}
+.btn:hover{filter:brightness(1.08)}
+.btn[disabled]{opacity:.55;cursor:not-allowed}
+.scene{position:relative;height:clamp(260px,34vw,420px);margin-top:26px}
+.scene svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.verse{background:var(--navy2);color:#fff;text-align:center}
+.verse p{font-family:Tinos,serif;font-size:clamp(20px,2.6vw,26px);max-width:40em;margin:0 auto}
+.verse small{display:block;color:var(--gold2);font-size:15px;margin-top:8px}
+.two{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+.photo{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-top:18px}
+.photo img{width:120px;height:160px;object-fit:cover;border-radius:10px}
+.quote{border-left:4px solid var(--gold);padding:4px 0 4px 16px;font-family:Tinos,serif;font-size:22px;margin:18px 0}
+.facts{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.facts dt{font-weight:700;color:light-dark(var(--navy),var(--gold2))}
+.facts dd{margin:0 0 12px}
+.arenas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:22px}
+.ar{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.ar svg{width:56px;height:56px;display:block;margin-bottom:8px}
+.ar ul{padding-left:20px;margin:8px 0 0}
+.gov{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:20px;margin-top:20px;background:var(--navy);color:#fff;border-radius:16px;padding:clamp(18px,3vw,32px)}
+.gov h3{color:#fff}
+.gov ol{counter-reset:s;list-style:none;padding:0;margin:12px 0 0}
+.gov ol li{counter-increment:s;display:grid;grid-template-columns:40px minmax(0,1fr);gap:10px;margin-bottom:12px}
+.gov ol li::before{content:counter(s);width:34px;height:34px;border-radius:50%;background:var(--gold);color:#16130a;font-weight:700;display:grid;place-items:center}
+.gov .pray{background:#ffffff14;border-radius:12px;padding:16px}
+.gov .note{color:#c9d1e6;font-size:15px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.proc{background:var(--navy);color:#fff;border-radius:16px;padding:24px;border:3px solid var(--gold)}
+.proc h3{color:var(--gold2);text-align:center}
+.proc ul{padding-left:20px}
+.proc .ref{color:#c9d1e6;font-size:15px;white-space:nowrap}
+.roles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+.roles span{background:var(--tag);border-radius:10px;padding:12px;text-align:center;font-weight:700;font-family:Tinos,serif;font-size:19px}
+form{display:grid;gap:12px;margin-top:12px}
+label{font-weight:600;display:grid;gap:4px}
+input{font:inherit;font-size:16px;padding:12px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink)}
+.ok{background:light-dark(#e7f4e6,#1d3324);border-radius:10px;padding:12px;font-weight:600}
+.list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
+.item{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.item b{display:block;font-size:18px}
+.item small{color:var(--soft);font-size:15px}
+.tag{flex:none;background:var(--tag);color:light-dark(#6b4b0c,var(--gold2));font-size:13px;font-weight:700;border-radius:999px;padding:4px 10px;white-space:nowrap}
+.phone{width:230px;margin:0 auto;border:10px solid #1b1b1f;border-radius:34px;background:#fff;overflow:hidden;box-shadow:0 10px 30px #0003}
+.phone .pt{background:linear-gradient(#f7b65a,#e46b3a);color:#fff;padding:26px 14px 18px;font-family:Tinos,serif;font-size:22px;line-height:1.1}
+.phone .pr{padding:10px 14px;color:#222;font-size:14px;border-bottom:1px solid #eee}
+.group{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
+.give{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px;align-items:center}
+.big{font-family:Tinos,serif;font-size:clamp(26px,3vw,34px);color:light-dark(var(--navy),#fff)}
+footer{background:var(--navy2);color:#dfe5f3}
+footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
+footer b{color:#fff}
+.nowrap{white-space:nowrap}
+@keyframes on{from{opacity:0}to{opacity:1}}
+.win{opacity:0;animation:on .5s ease forwards}
+@media(prefers-reduced-motion:reduce){.win{animation:none;opacity:1}html{scroll-behavior:auto}}
+@media(max-width:900px){.arenas{grid-template-columns:repeat(2,minmax(0,1fr))}.group{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.hero .top,.two,.gov,.give{grid-template-columns:minmax(0,1fr)}.list{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:480px){.arenas,.group{grid-template-columns:minmax(0,1fr)}.roles{grid-template-columns:repeat(2,minmax(0,1fr))}.photo{grid-template-columns:90px minmax(0,1fr)}.photo img{width:90px;height:120px}}
+</style>
+</head>
+<body>
+
+
+<div style="height:env(safe-area-inset-top,0px);background:#0c1a36"></div>
+<nav aria-label="Site">
+  <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><g id="burst"></g><circle cx="50" cy="50" r="22" fill="#fbf1dc" stroke="#d9a441" stroke-width="3"/><rect x="46" y="34" width="8" height="34" fill="#13254a"/><rect x="37" y="42" width="26" height="7" fill="#13254a"/></svg>
+  <div class="links">
+    <a href="#story">Our Story</a><a href="#stand">Where We Stand Up</a><a href="#ambassador">Become an Ambassador</a><a href="#tools">Tools</a><a href="#messages">Messages</a><a href="#church">Your Church</a><a href="#groups">Clubs &amp; Groups</a><a href="#store">Store</a><a href="#give">Give</a><a href="#connect">Stay Connected</a>
+  </div>
+</nav>
+
+<header class="hero band" id="home" style="padding-bottom:0">
+  <div class="in">
+    <div class="top">
+      <div>
+        <h1>Standing Up<br>For Jesus</h1>
+        <div class="sub">Ambassadors for Jesus · Salt and Light</div>
+      </div>
+      <div>
+        <p class="lead">We can be silent no more. Jesus called us to be salt and light, and too many of us have kept our faith to ourselves on Sunday morning. Stand up with us, at the kitchen table, at work, on Main Street and in government.</p>
+        <div class="btns">
+          <a class="btn main" href="#ambassador">Become an Ambassador</a>
+          <a class="btn" href="#church">Bring it to your church or club</a>
+          <a class="btn" href="#give">Give</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scene" role="img" aria-label="A small town on a hill at night, its windows lighting up under a rising gold sunburst and cross"><svg id="scene" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMax slice"></svg></div>
+</header>
+
+<section class="verse band" aria-label="Today's proclamation">
+  <p id="pTxt">I am persuaded; to honor God with my life, with all my heart, mind, soul and body.</p>
+  <small id="pRef">Today's proclamation · 1 Corinthians 6:19-20</small>
+</section>
+
+<section class="band" id="story">
+  <div class="in two">
+    <div>
+      <h2>Why we stand up</h2>
+      <p>Jesus gave us an assignment: to build His Kingdom, not a denomination's roster. Being saved is the first step. The rest is walking with Jesus and, as part of His army, standing up for God's principles in a world that has pushed Him out of the public square, the board room, our schools and even the family table.</p>
+      <p>We have been quiet long enough. Standing Up For Jesus is a multi-denominational movement of ordinary believers who carry their faith, with love and courage, into every part of daily life.</p>
+      <div class="quote">"Don't rage against the dark, turn on the lights!"<br><small style="font-family:'Source Sans 3',sans-serif;font-size:15px;color:var(--soft)">Pastor Allen Jackson, World Outreach Church</small></div>
+      <div class="photo">
+        <img alt="Rob Hooper" src="data:image/jpeg;base64,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">
+        <div><b>A word from Rob Hooper</b><p style="margin:.3em 0 0">"Today, I am Standing Up for Jesus, and I am inviting you, your club and all your family to stand with me. I am not sure where this will take us in the short term, but I am very confident in where it will lead us in God's plan."</p></div>
+      </div>
+    </div>
+    <dl class="facts">
+      <dt>Our vision</dt><dd>A community changed by Jesus' principles, where faith shapes every decision.</dd>
+      <dt>Our mission</dt><dd>Mobilize believers to bring grace and truth into the public square, the work place and the home.</dd>
+      <dt>Our verse</dt><dd>"You are the light of the world. A city that is set on a hill cannot be hidden." Matthew 5:14</dd>
+      <dt>Our home</dt><dd>The Rose Motorsports Foundation, an IRS-approved 501(c)(3), is the ministry's financial home.</dd>
+    </dl>
+  </div>
+</section>
+
+<section class="band paper" id="stand">
+  <div class="in">
+    <h2>Where we stand up</h2>
+    <p style="max-width:40em">Four arenas, one calling. Pick the one in front of you this week.</p>
+    <div class="arenas" id="arenas"></div>
+    <div class="gov" id="government">
+      <div>
+        <h3>Government at all levels: speak at public meetings</h3>
+        <p>City councils, county boards and school boards often set aside time for the public to speak. In Arizona it is called the "call to the public." Here is a simple way to use it.</p>
+        <ol>
+          <li><span><b>Find the meeting.</b> Look up the agenda and the board's own rules for public comment. Rules differ by state and by board.</span></li>
+          <li><span><b>Sign up to speak.</b> Most boards use a card or sign-in sheet before the meeting starts.</span></li>
+          <li><span><b>Prepare three minutes.</b> Tell them what you will tell them, tell them, then tell them what you told them. Speak from a Jesus point of view, with respect.</span></li>
+          <li><span><b>Bring others.</b> Each speaker gets their own time, so several voices can carry one message.</span></li>
+          <li><span><b>Follow up.</b> Email the officials and their staff, local media and your church leaders.</span></li>
+        </ol>
+      </div>
+      <div class="pray">
+        <h3>Hold them to the issues, and pray</h3>
+        <p>"Therefore I exhort first of all that supplications, prayers, intercessions, and giving of thanks be made for all men, for kings and all who are in authority, that we may lead a quiet and peaceable life in all godliness and reverence." 1 Timothy 2:1-2 (NKJV)</p>
+        <p>Pray for those who lead by name, every week. Learn the issues before your board, and speak to them with grace and truth.</p>
+        <p class="note">General information, not legal advice. Whether a board must offer public comment, and for how long, depends on your state's law and the board's rules.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="ambassador">
+  <div class="in two">
+    <div>
+      <h2>Become an Ambassador for Jesus</h2>
+      <p>"We are ambassadors for Christ, as though God were pleading through us." 2 Corinthians 5:20. An Ambassador for Jesus speaks up for Him where they live, work and serve, and brings one more person along.</p>
+      <p><b>The roles Jesus gives us:</b></p>
+      <div class="roles"><span>Prophet</span><span>Priest</span><span>King</span><span>Watchman</span><span>Gatekeeper</span><span>Warrior</span></div>
+      <p><b>Start a Local Warrior Band.</b> Gather two or three friends, pray together, pick one meeting or one neighbor to stand up for, and share what God does.</p>
+      <div class="card">
+        <h3>Join the army</h3>
+        <p style="margin:.3em 0">Get notices of issues, meetings and trainings.</p>
+        <p>Call or text Rob at <a class="nowrap" href="tel:+19096412700">909-641-2700</a> to join. Online sign-up is coming soon.</p>
+      </div>
+    </div>
+    <div class="proc">
+      <h3>A Warrior's Proclamation</h3>
+      <p><b>As a warrior for God, I proclaim:</b></p>
+      <ul>
+        <li>I am the salt of the earth. <span class="ref">Matt 5:13</span></li>
+        <li>I am the light of the world. <span class="ref">Matt 5:14</span></li>
+        <li>Jesus is my Lord; I am a child of God. He has chosen me. <span class="ref">John 1:12-13</span></li>
+        <li>I am a joint heir with Christ. <span class="ref">Rom 8:17</span></li>
+        <li>I am a new creation, reconciled to God. <span class="ref">2 Cor 5:17-18</span></li>
+        <li>I am God's workmanship, created for His purpose. <span class="ref">Eph 2:10</span></li>
+        <li>I am an Ambassador for Jesus of Nazareth, my Lord and King. <span class="ref">2 Cor 5:20</span></li>
+      </ul>
+      <p><b>For God, I will stand my ground.</b> "The Sovereign Lord is my strength." <span class="ref">Hab 3:19</span></p>
+      <p><b>The Warrior's Prayer.</b> I am a child of Almighty God; Jesus is Lord of my life, and the Holy Spirit is my helper. God Himself has called me for His purposes. I choose God's path with my entire being. May God give me the strength I need to complete the course He has chosen. Amen.</p>
+      <p class="ref" style="white-space:normal">Adapted from Allen Jackson Ministries. Permission to post is being requested.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band paper" id="tools">
+  <div class="in">
+    <h2>Ambassador tools</h2>
+    <p>Ready-to-use help for standing up. Some free, some for a donation.</p>
+    <div class="list" id="toolList"></div>
+  </div>
+</section>
+
+<section class="band" id="messages">
+  <div class="in">
+    <h2>Messages</h2>
+    <p>Sermons and teaching to watch, read and share. Videos come once our channel is open.</p>
+    <div class="list" id="msgList"></div>
+  </div>
+</section>
+
+<section class="band paper" id="church">
+  <div class="in two">
+    <div>
+      <h2>Bring it to your church</h2>
+      <p>Our little church in Yucca, Arizona has a simple, phone-friendly page anyone can open and share. We will set one up for your church too, free.</p>
+      <ul>
+        <li>This week's service, songs and news on one page</li>
+        <li>Saves to the phone's home screen like an app</li>
+        <li>A share button so members can invite friends</li>
+        <li>Prayer requests kept private, in a members-only group</li>
+        <li>Your own leader keeps it up to date</li>
+      </ul>
+      <p><a href="https://rchoop.github.io/Light-in-the-Desert/">See the Light in the Desert page</a></p>
+      <p>To ask for a page, call or text Rob at <a class="nowrap" href="tel:+19096412700">909-641-2700</a>.</p>
+    </div>
+    <div class="phone" aria-hidden="true">
+      <div class="pt">Light in the Desert<br><small style="font-size:14px">Yucca, Arizona</small></div>
+      <div class="pr"><b>This week</b><br>Sunday worship and the message</div>
+      <div class="pr"><b>Songs</b><br>Words for every song we sing</div>
+      <div class="pr"><b>Prayer</b><br>Join our prayer team</div>
+      <div class="pr" style="border:0"><b>Share</b><br>Light travels farther when it's shared</div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="groups">
+  <div class="in">
+    <h2>Clubs and groups</h2>
+    <p style="max-width:44em">Every church, classic car club, association, family office and business group can have its own page and its own leader, tied back here to the proclamation, tools and store.</p>
+    <div class="group" id="groupList"></div>
+  </div>
+</section>
+
+<section class="band paper" id="store">
+  <div class="in">
+    <h2>Store</h2>
+    <p>Every purchase helps fund the ministry, and clubs and churches share in what their members buy. Opening soon.</p>
+    <div class="list" id="storeList"></div>
+  </div>
+</section>
+
+<section class="band" id="give">
+  <div class="in give">
+    <div>
+      <h2>Give</h2>
+      <p class="big">Help bring this message to more churches and clubs.</p>
+      <p>Gifts go to the Rose Motorsports Foundation, an IRS-approved 501(c)(3), and are tax-deductible as the law allows. You will be able to give once or every month, by card, Apple Pay or Google Pay, and get your receipt by email.</p>
+    </div>
+    <div class="card" style="text-align:center">
+      <button class="btn main" disabled style="width:100%;justify-content:center">Online giving coming soon</button>
+      <p style="margin-bottom:0">To give before then, call or text Rob at <a class="nowrap" href="tel:+19096412700">909-641-2700</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band paper" id="connect">
+  <div class="in two">
+    <div>
+      <h2>Stay connected</h2>
+      <p><b>Pray with us.</b> Join our members-only prayer group. Prayer requests are never posted on this site.</p>
+      <p><b>Share this with one person.</b> That is how faith has always spread.</p>
+      <div class="btns"><button class="btn main" id="copy" type="button">Copy the site address</button><span id="copied" class="ok" hidden>Copied: StandingUpForJesus.com</span></div>
+    </div>
+    <div class="card">
+      <h3>Questions?</h3>
+      <p>Call or text Rob Hooper at <b class="nowrap">909-641-2700</b>.</p>
+      <div class="btns"><a class="btn main" href="tel:+19096412700">Call Rob</a><a class="btn" style="color:inherit" href="sms:+19096412700">Text Rob</a></div>
+    </div>
+  </div>
+</section>
+
+<footer class="band">
+  <div class="in row">
+    <div><b>Standing Up For Jesus</b><br>A ministry of the Rose Motorsports Foundation, a 501(c)(3).</div>
+    <div>Join us. Pray with us. Share it with one person.<br>Rob Hooper · <span class="nowrap">909-641-2700</span></div>
+  </div>
+</footer>
+
+<script>
+{
+const ns='http://www.w3.org/2000/svg';
+let seed=7;const rnd=()=>(seed=seed*16807%2147483647)/2147483647;
+const rays=(cx,cy,r1,r2,n,fill)=>{let d='';for(let i=0;i<n;i++){const a=i/n*Math.PI*2,b=a+Math.PI/n*.55,c=a-Math.PI/n*.55,L=i%2?r2*.72:r2;d+=`M${cx+r1*Math.cos(c)},${cy+r1*Math.sin(c)}L${cx+L*Math.cos(a)},${cy+L*Math.sin(a)}L${cx+r1*Math.cos(b)},${cy+r1*Math.sin(b)}Z`}return `<path d="${d}" fill="${fill}"/>`};
+document.getElementById('burst').innerHTML=rays(50,50,20,48,24,'#d9a441');
+let stars='';for(let i=0;i<70;i++){const x=rnd()*1200,y=rnd()*230,r=rnd()*1.6+.4;stars+=`<circle cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" r="${r.toFixed(1)}" fill="#fff" opacity="${(.3+rnd()*.6).toFixed(2)}"/>`}
+const houses=[[430,300,46,34],[480,290,40,44],[525,296,36,38],[700,292,44,42],[748,300,38,34],[790,306,40,30],[390,312,40,28],[835,312,42,28]];
+let town='',wins='',k=0;
+for(const [x,y,w,h] of houses){town+=`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#0a1428"/><path d="M${x-4},${y}L${x+w/2},${y-18}L${x+w+4},${y}Z" fill="#0a1428"/>`;
+ for(let j=0;j<2;j++){wins+=`<rect class="win" style="animation-delay:${(.4+k*.18).toFixed(2)}s" x="${x+8+j*(w-24)}" y="${y+10}" width="8" height="10" fill="#f2c867"/>`;k++}}
+const church=`<rect x="574" y="250" width="92" height="86" fill="#0a1428"/><path d="M566,252L620,214L674,252Z" fill="#0a1428"/><rect x="604" y="170" width="32" height="70" fill="#0a1428"/><path d="M600,172L620,134L640,172Z" fill="#0a1428"/><rect x="617" y="112" width="6" height="26" fill="#0a1428"/><rect x="610" y="119" width="20" height="5" fill="#0a1428"/><rect class="win" style="animation-delay:${(.4+k*.18).toFixed(2)}s" x="606" y="290" width="28" height="46" rx="14" fill="#f2c867"/>`;
+document.getElementById('scene').innerHTML=`<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#13254a"/><stop offset="1" stop-color="#2a3d6b"/></linearGradient><radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#f2c867" stop-opacity=".55"/><stop offset="1" stop-color="#f2c867" stop-opacity="0"/></radialGradient><linearGradient id="hill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16264a"/><stop offset="1" stop-color="#0c1a36"/></linearGradient></defs>
+<rect width="1200" height="420" fill="url(#sky)"/>${stars}
+<circle cx="620" cy="150" r="230" fill="url(#glow)"/>
+${rays(620,150,62,150,32,'#d9a441')}
+<circle cx="620" cy="150" r="64" fill="#fbf1dc" stroke="#d9a441" stroke-width="5"/>
+<rect x="609" y="104" width="22" height="94" fill="#13254a"/><rect x="584" y="126" width="72" height="19" fill="#13254a"/>
+<path d="M0,370 C180,340 300,300 460,312 C560,296 680,292 820,314 C960,330 1080,350 1200,360 L1200,420 L0,420Z" fill="#1d2f57" opacity=".7"/>
+${town}${church}${wins}
+<path d="M0,420 L0,388 C200,360 380,330 520,334 C620,330 720,330 860,340 C1000,352 1120,372 1200,384 L1200,420Z" fill="url(#hill)"/>`;
+
+const P=[["I am persuaded; to honor God with my life, with all my heart, mind, soul and body.","1 Corinthians 6:19-20"],["I am persuaded; I will endure, persevere, and complete my course, and receive the reward the Lord will present.","2 Timothy 2:3,8"],["I am persuaded; God has made complete provision for my life in time and eternity. In Christ I have everything I need to overcome.","2 Corinthians 2:14"]];
+const day=Math.floor((Date.now()-new Date(new Date().getFullYear(),0,0))/864e5),p=P[day%3];
+document.getElementById('pTxt').textContent=p[0];document.getElementById('pRef').textContent="Today's proclamation · "+p[1];
+
+const ic={table:'<rect x="8" y="22" width="48" height="6" rx="2"/><rect x="12" y="28" width="5" height="22"/><rect x="47" y="28" width="5" height="22"/><path d="M24 22v-8h16v8" fill="none" stroke-width="3"/>',work:'<rect x="8" y="20" width="48" height="32" rx="4"/><path d="M24 20v-7h16v7" fill="none" stroke-width="3"/><rect x="8" y="32" width="48" height="4" fill="#fbf1dc"/>',main:'<path d="M6 26l6-14h40l6 14z"/><rect x="10" y="26" width="44" height="26"/><rect x="18" y="34" width="10" height="18" fill="#fbf1dc"/><rect x="34" y="32" width="14" height="10" fill="#fbf1dc"/>',gov:'<path d="M32 6l24 12H8z"/><rect x="10" y="20" width="44" height="4"/><rect x="13" y="26" width="5" height="20"/><rect x="23" y="26" width="5" height="20"/><rect x="36" y="26" width="5" height="20"/><rect x="46" y="26" width="5" height="20"/><rect x="8" y="48" width="48" height="6"/>'};
+const A=[["table","The Kitchen Table","Our families and the next generation.",["Pray together at meals","Talk about faith with your children and grandchildren","Open your home to a neighbor"]],["work","The Work Place","Where we spend most of our week.",["Be known for honest work","Speak of Jesus with grace when asked","Pray for coworkers by name"]],["main","Main Street","Our neighbors, clubs and businesses.",["Invite one person to church","Bring the message to your club","Serve where your town has need"]],["gov","Government at all levels","Speaking to the issues and praying for those who lead.",["Speak at public meetings","Write to officials and staff","Pray for leaders every week"]]];
+document.getElementById('arenas').innerHTML=A.map(a=>`<div class="ar"><svg viewBox="0 0 64 64" aria-hidden="true" fill="#d9a441" stroke="#d9a441">${ic[a[0]]}</svg><h3>${a[1]}</h3><p>${a[2]}</p><ul>${a[3].map(x=>`<li>${x}</li>`).join('')}</ul>${a[0]==='gov'?'<p><a href="#government">How to speak at a meeting</a></p>':''}</div>`).join('');
+
+const item=(t,s,g)=>`<div class="item"><div><b>${t}</b><small>${s}</small></div>${g?`<span class="tag">${g}</span>`:''}</div>`;
+document.getElementById('toolList').innerHTML=[["Warrior's Proclamation card","Printable, pocket size","Coming soon"],["Daily \"I am persuaded\" proclamations","Pray, read and proclaim","Coming soon"],["Romans 12 study","Slides and notes for a small group","Coming soon"],["Be Unoffendable","Study slides","Coming soon"],["Speaking scripts","Introduction speech, A challenge to leadership, Protecting our children and more","Coming soon"],["\"I'm a Disciple of Christ\"","Song with chord sheet","Coming soon"]].map(x=>item(...x)).join('');
+document.getElementById('msgList').innerHTML=[["Standing Up For Jesus, Sermon 1.1","The opening message: what it means to stand up, and St. Patrick's blessing","Video soon"],["Turn On the Light","Don't rage against the darkness, be the light","Video soon"],["Come and See","An invitation to meet Jesus","Video soon"],["The Darkness and the Light","John 1:4-5 in the Greek: the darkness has not overcome it","Video soon"]].map(x=>item(...x)).join('');
+document.getElementById('storeList').innerHTML=[["Books and Bibles","Through trusted booksellers"],["Messaging gear","Shirts, caps and more that start a conversation"],["Family items","For the kitchen table arena"],["Messaging quilts","Finished quilts and kits, a teaching and comfort tool"],["Tetelestai","Rob Hooper's book, once published"],["Club and church share","Your group earns a share of what its members buy"]].map(x=>item(x[0],x[1],'Coming soon')).join('');
+document.getElementById('groupList').innerHTML=[["Light in the Desert","Church · Yucca, Arizona","Live"],["Classic car clubs","First club pages are being set up","Coming soon"],["Your church or club","Call Rob to start yours","Open"]].map(x=>item(...x)).join('');
+
+document.getElementById('copy').addEventListener('click',async()=>{const c=document.getElementById('copied');try{await navigator.clipboard.writeText('https://standingupforjesus.com');c.textContent='Copied: StandingUpForJesus.com'}catch(e){c.textContent='Share this address: StandingUpForJesus.com'}c.hidden=false});
+}
+</script>
+
+</body>
+</html>
