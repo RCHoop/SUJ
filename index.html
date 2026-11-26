@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="Standing Up For Jesus: Ambassadors for Jesus, salt and light at the kitchen table, at work, in church, on Main Street, in government and in the public square.">
 <meta name="theme-color" content="#0c1a36">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="apple-mobile-web-app-title" content="Stand Up">
 <title>Standing Up For Jesus</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -98,6 +102,26 @@ input{font:inherit;font-size:16px;padding:12px;border-radius:10px;border:1.5px s
 .group{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
 .give{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px;align-items:center}
 .big{font-family:Tinos,serif;font-size:clamp(26px,3vw,34px);color:light-dark(var(--navy),#fff)}
+.keep{margin-top:22px;background:var(--navy);color:#fff;border:3px solid var(--gold);border-radius:18px;padding:clamp(18px,3vw,28px);box-shadow:0 14px 34px -18px #0c1a36}
+.keephead{display:grid;grid-template-columns:76px minmax(0,1fr);gap:16px;align-items:center}
+.keephead h3{color:var(--gold2);font-size:clamp(24px,3vw,30px)}
+.keephead p{margin:.3em 0 0;color:#dfe5f3}
+.appicon{width:76px;height:76px;display:block;filter:drop-shadow(0 6px 10px #0006)}
+.keepcols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
+.keepcols>div{background:#ffffff14;border-radius:12px;padding:14px 16px}
+.keepcols>div>b{color:var(--gold2);font-size:19px}
+.keepcols ol{counter-reset:k;list-style:none;padding:0;margin:10px 0 0;display:grid;gap:10px}
+.keepcols li{counter-increment:k;display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;align-items:start}
+.keepcols li::before{content:counter(k);width:28px;height:28px;border-radius:50%;background:var(--gold);color:#16130a;font-weight:700;display:grid;place-items:center;font-size:15px}
+.side{display:grid;gap:18px}
+.sharebox{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--gold);border-radius:14px;padding:20px;text-align:center}
+.sharebox p{max-width:28em;margin-inline:auto}
+.qrwrap{width:min(210px,70%);margin:14px auto 4px;padding:10px;background:#fff;border:3px solid var(--gold);border-radius:16px}
+.qrwrap svg{display:block;width:100%;height:auto}
+.sharebox .btns{justify-content:center}
+.btn.save{gap:10px}
+.btn.save svg{width:22px;height:22px;flex:none}
+@media(max-width:560px){.keepcols{grid-template-columns:minmax(0,1fr)}}
 footer{background:var(--navy2);color:#dfe5f3}
 footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
 footer b{color:#fff}
@@ -134,6 +158,7 @@ footer b{color:#fff}
           <a class="btn main" href="#ambassador">Become an Ambassador</a>
           <a class="btn" href="#church">Bring it to your church or club</a>
           <a class="btn" href="#give">Give</a>
+          <a class="btn save" href="#keep"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#f2c867" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M12 7v7m-3-3l3 3 3-3"/><path d="M10 18h4"/></svg>Save to your phone</a>
         </div>
       </div>
     </div>
@@ -323,13 +348,27 @@ footer b{color:#fff}
     <div>
       <h2>Stay connected</h2>
       <p><b>Pray with us.</b> Join our members-only prayer group. Prayer requests are never posted on this site.</p>
-      <p><b>Share this with one person.</b> That is how faith has always spread.</p>
-      <div class="btns"><button class="btn main" id="copy" type="button">Copy the site address</button><span id="copied" class="ok" hidden>Copied: StandingUpForJesus.com</span></div>
+      <div class="keep" id="keep">
+        <div class="keephead"><svg viewBox="0 0 100 100" aria-hidden="true" class="appicon"><rect width="100" height="100" rx="22" fill="#0c1a36"/><g transform="translate(50 50) scale(.8) translate(-50 -50)"><g class="burst2"></g><circle cx="50" cy="50" r="22" fill="#fbf1dc" stroke="#d9a441" stroke-width="3"/><rect x="46" y="34" width="8" height="34" fill="#13254a"/><rect x="37" y="42" width="26" height="7" fill="#13254a"/></g></svg><div><h3>Keep us on your phone</h3><p>Put our gold cross with your apps. One tap brings you back.</p></div></div>
+        <div class="keepcols">
+          <div><b>iPhone</b><ol><li>Open this page in <b>Safari</b>.</li><li>Tap the <b>Share</b> button, the square with the arrow.</li><li>Tap <b>Add to Home Screen</b>, then <b>Add</b>.</li></ol></div>
+          <div><b>Android</b><ol><li>Open this page in <b>Chrome</b>.</li><li>Tap the <b>three dots</b> at the top right.</li><li>Tap <b>Add to Home screen</b>, then <b>Add</b>.</li></ol></div>
+        </div>
+      </div>
     </div>
-    <div class="card">
-      <h3>Questions?</h3>
-      <p>Call or text Rob Hooper at <b class="nowrap">909-641-2700</b>.</p>
-      <div class="btns"><a class="btn main" href="tel:+19096412700">Call Rob</a><a class="btn" style="color:inherit" href="sms:+19096412700">Text Rob</a></div>
+    <div class="side">
+      <div class="sharebox">
+        <h3>Share it with one person</h3>
+        <p>That is how faith has always spread. Let a friend point their phone's camera at this code.</p>
+        <div class="qrwrap"><svg viewBox="0 0 37 37" class="qr"><title>QR code for the Standing Up For Jesus site</title><path fill="#fff" d="M0 0h37v37h-37z"/><path class="qrline" stroke="#0c1a36" d="M2 2.5h7m2 0h2m4 0h5m1 0h1m1 0h2m1 0h7m-33 1h1m5 0h1m1 0h1m1 0h1m2 0h3m1 0h1m2 0h3m1 0h1m1 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m3 0h1m1 0h1m1 0h2m5 0h2m3 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m4 0h1m1 0h1m1 0h2m2 0h1m4 0h1m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m3 0h1m2 0h2m1 0h4m1 0h1m2 0h1m1 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m1 0h3m2 0h4m4 0h2m3 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-25 1h3m2 0h1m1 0h2m1 0h4m1 0h1m-20 1h4m1 0h1m1 0h1m3 0h2m1 0h2m1 0h1m2 0h1m1 0h2m3 0h1m-28 1h2m1 0h3m3 0h6m2 0h1m1 0h1m3 0h1m1 0h3m-30 1h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m6 0h1m3 0h7m1 0h1m-32 1h5m5 0h2m2 0h1m1 0h2m4 0h2m1 0h2m1 0h1m3 0h1m-32 1h1m2 0h5m4 0h6m3 0h3m1 0h1m4 0h2m-33 1h1m6 0h1m3 0h2m4 0h2m1 0h2m1 0h3m3 0h3m-30 1h1m2 0h3m3 0h3m1 0h3m2 0h1m2 0h1m7 0h1m-31 1h2m2 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m2 0h1m1 0h1m2 0h1m4 0h1m-32 1h2m2 0h1m1 0h1m3 0h2m3 0h4m2 0h1m3 0h2m1 0h1m1 0h1m-31 1h2m1 0h1m1 0h1m1 0h2m1 0h1m1 0h2m2 0h4m3 0h3m1 0h1m4 0h1m-32 1h2m1 0h1m1 0h1m3 0h6m1 0h1m1 0h1m3 0h2m3 0h2m1 0h1m-31 1h3m1 0h1m1 0h4m2 0h2m1 0h3m1 0h2m6 0h1m2 0h2m-33 1h1m1 0h2m1 0h2m2 0h2m1 0h3m1 0h7m1 0h3m1 0h2m1 0h2m-33 1h2m6 0h1m2 0h2m2 0h2m2 0h1m1 0h1m3 0h3m2 0h1m-29 1h2m1 0h4m1 0h2m3 0h1m2 0h1m1 0h1m6 0h2m1 0h2m-25 1h1m3 0h1m1 0h3m1 0h3m1 0h1m2 0h1m2 0h1m3 0h1m-32 1h2m3 0h3m2 0h1m2 0h1m1 0h1m1 0h1m1 0h2m1 0h7m2 0h1m-24 1h3m2 0h3m2 0h3m1 0h1m1 0h1m3 0h1m-29 1h7m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h2m1 0h1m1 0h1m1 0h2m1 0h1m-32 1h1m5 0h1m1 0h2m5 0h3m2 0h2m2 0h1m3 0h1m2 0h2m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h2m3 0h2m5 0h6m-30 1h1m1 0h3m1 0h1m2 0h1m1 0h2m2 0h1m1 0h3m1 0h2m3 0h3m3 0h1m-33 1h1m1 0h3m1 0h1m2 0h1m3 0h1m1 0h1m1 0h1m1 0h1m2 0h1m1 0h3m1 0h3m-31 1h1m5 0h1m2 0h3m3 0h6m1 0h1m1 0h6m-30 1h7m5 0h3m1 0h1m1 0h1m3 0h3m2 0h1m4 0h1"/></svg></div>
+        <div class="btns"><button class="btn main" id="share" type="button">Share this site</button><a class="btn" style="color:inherit" href="SUJ-QR-cards.pdf" download>Print pocket cards</a></div>
+        <p class="ok" id="copied" hidden></p>
+      </div>
+      <div class="card">
+        <h3>Questions?</h3>
+        <p>Call or text Rob Hooper at <b class="nowrap">909-641-2700</b>.</p>
+        <div class="btns"><a class="btn main" href="tel:+19096412700">Call Rob</a><a class="btn" style="color:inherit" href="sms:+19096412700">Text Rob</a></div>
+      </div>
     </div>
   </div>
 </section>
@@ -380,7 +419,12 @@ document.getElementById('msgList').innerHTML=[["Standing Up For Jesus, Sermon 1.
 document.getElementById('storeList').innerHTML=[["Books and Bibles","Through trusted booksellers"],["Messaging gear","Shirts, caps and more that start a conversation"],["Family items","For the kitchen table arena"],["Messaging quilts","Finished quilts and kits, a teaching and comfort tool"],["Tetelestai","Rob Hooper's book, once published"],["Club and church share","Your group earns a share of what its members buy"]].map(x=>item(x[0],x[1],'Coming soon')).join('');
 document.getElementById('groupList').innerHTML=[["Light in the Desert","Church · Yucca, Arizona","Live"],["Classic car clubs","First club pages are being set up","Coming soon"],["Your church or club","Call Rob to start yours","Open"]].map(x=>item(...x)).join('');
 
-document.getElementById('copy').addEventListener('click',async()=>{const c=document.getElementById('copied');try{await navigator.clipboard.writeText('https://standingupforjesus.com');c.textContent='Copied: StandingUpForJesus.com'}catch(e){c.textContent='Share this address: StandingUpForJesus.com'}c.hidden=false});
+const SITE='https://rchoop.github.io/SUJ/';
+document.querySelectorAll('.burst2').forEach(g=>g.innerHTML=rays(50,50,20,48,24,'#d9a441'));
+try{if(navigator.standalone===true||matchMedia('(display-mode: standalone)').matches)document.getElementById('keep').hidden=true}catch(e){}
+document.getElementById('share').addEventListener('click',async()=>{const c=document.getElementById('copied');const d={title:'Standing Up For Jesus',text:'Standing Up For Jesus: ambassadors for Jesus, salt and light. Take a look:',url:SITE};
+ if(navigator.share){try{await navigator.share(d);return}catch(e){if(e&&e.name==='AbortError')return}}
+ try{await navigator.clipboard.writeText(SITE);c.textContent='Copied. Paste it into a text or email.'}catch(e){c.textContent='Share this address: '+SITE.replace('https://','')}c.hidden=false});
 }
 </script>
 
